@@ -49,8 +49,7 @@ for (checks = 0; temp->next && checks < s_Range; checks++)
 {
 if (temp->next->n < temp->n)
 {
-swap_adjacent(list, temp, temp->next);
-fowardswapped = true;
+swap_adjacent(list, temp, temp->next), fowardswapped = true;
 }
 else
 {
@@ -60,7 +59,7 @@ temp = temp->next;
 if (!temp->next)
 s_Range = checks;
 if (fowardswapped)
-temp = temp->prev , s_Range--;
+temp = temp->prev, s_Range--;
 for (checks = 0; temp->prev && checks < s_Range; checks++)
 {
 if (temp->n < temp->prev->n)
