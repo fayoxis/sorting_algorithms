@@ -60,14 +60,12 @@ temp = temp->next;
 if (!temp->next)
 s_Range = checks;
 if (fowardswapped)
-temp = temp->prev;
-s_Range--;
+temp = temp->prev , s_Range--;
 for (checks = 0; temp->prev && checks < s_Range; checks++)
 {
 if (temp->n < temp->prev->n)
 {
-swap_adjacent(list, temp->prev, temp);
-backwardSwapped = true;
+swap_adjacent(list, temp->prev, temp), backwardSwapped = true;
 }
 else
 {
